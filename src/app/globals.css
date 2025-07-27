@@ -1,0 +1,214 @@
+@import "tailwindcss";
+
+:root {
+  --color-primary: #4c6fff;
+  --color-accent: #00c896;
+  --color-background: #fafafa;
+  --color-text: #1e1e1e;
+  --color-modal-bg: #ffffff;
+  --color-danger: #ff5f5f;
+  --color-success: #00c896;
+  --color-warning: #ffb800;
+  --color-info: #4c6fff;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+/* PrimeReact Theme Overrides */
+.p-component {
+  font-family: var(--font-geist-sans);
+}
+
+.p-button.p-button-primary {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.p-button.p-button-primary:hover {
+  background-color: #3a5cff;
+  border-color: #3a5cff;
+}
+
+.p-button.p-button-success {
+  background-color: var(--color-success);
+  border-color: var(--color-success);
+}
+
+.p-button.p-button-success:hover {
+  background-color: #00b589;
+  border-color: #00b589;
+}
+
+.p-button.p-button-danger {
+  background-color: var(--color-danger);
+  border-color: var(--color-danger);
+}
+
+.p-button.p-button-danger:hover {
+  background-color: #ff4646;
+  border-color: #ff4646;
+}
+
+/* Dialog styles */
+.p-dialog .p-dialog-header {
+  background-color: var(--color-modal-bg);
+  color: var(--color-text);
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  padding: 1.5rem 1.5rem 0.5rem;
+}
+
+.p-dialog .p-dialog-content {
+  background-color: var(--color-modal-bg);
+  color: var(--color-text);
+  padding: 0 1.5rem 1.5rem;
+}
+
+.p-dialog .p-dialog-footer {
+  background-color: var(--color-modal-bg);
+  padding: 0 1.5rem 1.5rem;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+/* Form components */
+.p-inputtext:enabled:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 1px var(--color-primary);
+}
+
+.p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box.p-focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 1px var(--color-primary);
+}
+
+.p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box.p-highlight {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.p-dropdown:not(.p-disabled).p-focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 1px var(--color-primary);
+}
+
+/* DataTable styles */
+.p-datatable .p-datatable-thead > tr > th {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.p-datatable .p-datatable-tbody > tr {
+  background-color: var(--color-modal-bg);
+}
+
+.p-datatable .p-datatable-tbody > tr:hover {
+  background-color: rgba(76, 111, 255, 0.04);
+}
+
+/* Toast styles */
+.p-toast .p-toast-message.p-toast-message-success {
+  background-color: rgba(0, 200, 150, 0.1);
+  border-color: var(--color-success);
+}
+
+.p-toast .p-toast-message.p-toast-message-error {
+  background-color: rgba(255, 95, 95, 0.1);
+  border-color: var(--color-danger);
+}
+
+/* Custom animations */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse {
+  animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-spin-slow {
+  animation: spin 15s linear infinite;
+}
+
+/* Animation delays */
+.delay-100 {
+  animation-delay: 0.1s;
+}
+
+.delay-200 {
+  animation-delay: 0.2s;
+}
+
+.delay-300 {
+  animation-delay: 0.3s;
+}
+
+.delay-500 {
+  animation-delay: 0.5s;
+}
+
+.delay-700 {
+  animation-delay: 0.7s;
+}
+
+.delay-1000 {
+  animation-delay: 1s;
+}
+
+.delay-2000 {
+  animation-delay: 2s;
+}
+
+/* Gradient text */
+.text-gradient {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Glass effect */
+.glass {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Add any additional global styles below */
